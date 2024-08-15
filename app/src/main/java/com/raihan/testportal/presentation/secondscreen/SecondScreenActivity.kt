@@ -3,7 +3,6 @@ package com.raihan.testportal.presentation.secondscreen
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
@@ -23,7 +22,8 @@ class SecondScreenActivity : AppCompatActivity() {
             if (result.resultCode == Activity.RESULT_OK) {
                 val user = result.data?.getParcelableExtra<User>("selected_user")
                 user?.let {
-                    binding.tvSelected.text = "${it.firstName} ${it.lastName}"
+                    binding.tvSelected.text =
+                        getString(R.string.text_merge_first_last_name, it.firstName, it.lastName)
                 }
             }
         }
@@ -47,7 +47,6 @@ class SecondScreenActivity : AppCompatActivity() {
 
         binding.btnChooseUser.setOnClickListener {
             val intent = Intent(this, ThirdScreenActivity::class.java)
-            Log.d("SecondActivity", "Launching ThirdActivity")
             selectUserLauncher.launch(intent)
         }
     }
