@@ -7,17 +7,6 @@ import com.raihan.testportal.data.model.User
 import com.raihan.testportal.data.source.network.service.TestPortalApiService
 
 class UserPagingSource(private val service: TestPortalApiService) : PagingSource<Int, User>() {
-    /*override fun getRefreshKey(state: PagingState<Int, User>): Int? {
-        return state.anchorPosition?.let { anchorPosition ->
-            state.closestPageToPosition(anchorPosition)?.prevKey?.plus(1)
-                ?: state.closestPageToPosition(anchorPosition)?.nextKey?.minus(1)
-        }
-    }*/
-    /*override fun getRefreshKey(state: PagingState<Int, User>): Int? {
-        return state.anchorPosition?.let { anchorPosition ->
-            state.closestPageToPosition(anchorPosition)?.nextKey?.minus(1)
-        }
-    }*/
     override fun getRefreshKey(state: PagingState<Int, User>): Int? {
         return state.anchorPosition?.let { anchorPosition ->
             val anchorPage = state.closestPageToPosition(anchorPosition)

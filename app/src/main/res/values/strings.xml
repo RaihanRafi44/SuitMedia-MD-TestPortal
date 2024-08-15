@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">TestPortal</string>
+    <string name="text_name">Name</string>
+    <string name="text_palindrome">Palindrome</string>
+    <string name="text_check">CHECK</string>
+    <string name="text_next">NEXT</string>
+    <string name="text_title_second_screen">Second Screen</string>
+    <string name="text_welcome">Welcome</string>
+    <string name="text_select_user">Selected User Name</string>
+    <string name="text_choose_user">Choose a User</string>
+    <string name="text_title_third_screen">Third Screen</string>
+    <string name="text_error">An error occurred</string>
+    <string name="text_no_data">No data available</string>
+    <string name="text_timeout">Timeout</string>
+    <string name="text_try_again">Try Again</string>
+    <string name="text_merge_first_last_name">%1$s %2$s</string>
 </resources>

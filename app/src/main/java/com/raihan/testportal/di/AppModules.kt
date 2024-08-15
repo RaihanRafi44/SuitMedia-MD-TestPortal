@@ -8,6 +8,8 @@ import com.raihan.testportal.data.repository.UserPagingRepositoryImpl
 import com.raihan.testportal.data.repository.UserRepository
 import com.raihan.testportal.data.repository.UserRepositoryImpl
 import com.raihan.testportal.data.source.network.service.TestPortalApiService
+import com.raihan.testportal.presentation.thirdscreen.ThirdScreenViewModel
+import org.koin.androidx.viewmodel.dsl.viewModelOf
 import org.koin.dsl.module
 
 object AppModules {
@@ -34,7 +36,7 @@ object AppModules {
 
     private val viewModel =
         module {
-            // viewModelOf(::ThirdScreenViewModel)
+            viewModelOf(::ThirdScreenViewModel)
         }
 
     val modules =
